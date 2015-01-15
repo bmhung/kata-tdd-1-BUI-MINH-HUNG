@@ -1,0 +1,23 @@
+{
+  "name": "tdd_kata",
+  "version": "1.0.0",
+  "description": "kata http://osherove.com/tdd-kata-1",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bmhung/kata-tdd-1-BUI-MINH-HUNG.git"
+  },
+  "author": "bmhung",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bmhung/kata-tdd-1-BUI-MINH-HUNG/issues"
+  },
+  "homepage": "https://github.com/bmhung/kata-tdd-1-BUI-MINH-HUNG",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-jshint": "^0.10.0"
+  }
+}
