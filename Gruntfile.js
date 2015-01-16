@@ -4,7 +4,10 @@ module.exports = function(grunt) {
 			files: ['gruntfile.js', 'src/**/*.js', 'test/**/*.js'],
 		},
 		jasmine: {
-			src: 'test/**/*.js'
+			src : 'src/**/*.js',
+			options : {
+				specs : 'spec/**/*.js'
+			}
 		}
 	});
 
