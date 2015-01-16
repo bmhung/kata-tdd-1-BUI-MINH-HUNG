@@ -6,14 +6,14 @@ var StringCalculator = function() {
 		//get delimiter in first line
 		var firstLine = numbersString.substring(0, numbersString.indexOf('\n'));
 		var delimiter;
-		var delimiterMatch = /\/\/(.)/.exec(firstLine);
+		var delimiterMatch = /\/\/\[?([^\[\]]*)\]?/.exec(firstLine);
 		if(delimiterMatch !== null) {
 			delimiter = delimiterMatch[1];
 		} else {
 			delimiter = ';';
 		}
 
-		var numbersRegex = new RegExp('(?!.*\\n)(-?\\d'+delimiter+'?)*');
+		var numbersRegex = new RegExp('(?!.*\\n)(-?\\d('+delimiter+')?)*');
 		
 		var numbers = numbersRegex.exec(numbersString)[0].split(delimiter);
 

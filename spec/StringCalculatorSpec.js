@@ -38,6 +38,6 @@ describe("StringCalculator sums all numbers in a string", function() {
 	});
 
 	it("should not work many-char-delimiter", function() {
-		expect(calculator.Add("//[,,]\n1,,-2,,3,,4,,-5")).toThrow('negatives not allowed: -2, -5');
+		expect(calculator.Add("//[,,]\n1,,2,,3,,4,,5")).toEqual(15);
 	});
 });
