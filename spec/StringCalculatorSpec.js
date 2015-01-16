@@ -22,6 +22,18 @@ describe("StringCalculator sums all numbers in a string", function() {
 	});
 
 	it("should work with custom delimiter", function() {
-		expect(calculator.Add("//-\n1-2-3-4-5")).toEqual(15);
+		expect(calculator.Add("//,\n1,2,3,4,5")).toEqual(15);
+	});
+
+	it("should not work with negative number", function() {
+		expect(calculator.Add("//,\n1,-2,3,4,5")).toThrowError('negatives not allowed: -2');
+	});
+
+	it("should not work with negative numbers", function() {
+		expect(calculator.Add("//,\n1,-2,3,4,-5")).toThrow('negatives not allowed: -2, -5');
+	});
+
+	it("should not work many-char-delimiter", function() {
+		expect(calculator.Add("//[,,]\n1,,-2,,3,,4,,-5")).toThrow('negatives not allowed: -2, -5');
 	});
 });

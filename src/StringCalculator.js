@@ -13,14 +13,22 @@ var StringCalculator = function() {
 			delimiter = ';';
 		}
 
-		var numbersRegex = new RegExp('(?!.*\\n)(\\d'+delimiter+'?)*');
+		var numbersRegex = new RegExp('(?!.*\\n)(-?\\d'+delimiter+'?)*');
 		
 		var numbers = numbersRegex.exec(numbersString)[0].split(delimiter);
 
 		var sum = 0;
+		var negativeNumbers = [];
 		for(var i=0; i < numbers.length; i++) { 
-			sum += parseInt(numbers[i]); 
+			var number = parseInt(numbers[i]);
+			if(number < 0) negativeNumbers.push(number);
+			sum += parseInt(number); 
 		}
+
+		if(negativeNumbers.length > 0) {
+			throw 'negatives not allowed: ' + negativeNumbers.join(', ');
+		}
+
 		return sum;
 	};
 };
