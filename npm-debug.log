@@ -1,0 +1,71 @@
+info it worked if it ends with ok
+verbose cli [ 'node', '/usr/bin/npm', 'install' ]
+info using npm@1.1.4
+info using node@v0.6.12
+verbose config file /home/bmh/.npmrc
+verbose config file /usr/etc/npmrc
+verbose config file /usr/share/npm/npmrc
+verbose caching /home/bmh/Documents/kata/kata-tdd-1-BUI-MINH-HUNG/package.json
+verbose loadDefaults tdd_kata@1.0.0
+verbose readDependencies: using package.json deps
+verbose where, deps [ '/home/bmh/Documents/kata/kata-tdd-1-BUI-MINH-HUNG',
+verbose where, deps   [ 'grunt', 'grunt-contrib-jshint' ] ]
+verbose from cache /home/bmh/Documents/kata/kata-tdd-1-BUI-MINH-HUNG/package.json
+info preinstall tdd_kata@1.0.0
+verbose from cache /home/bmh/Documents/kata/kata-tdd-1-BUI-MINH-HUNG/package.json
+verbose readDependencies: using package.json deps
+verbose cache add [ 'grunt@^0.4.5', null ]
+silly cache add: name, spec, args [ undefined, 'grunt@^0.4.5', [ 'grunt@^0.4.5', null ] ]
+verbose parsed url { pathname: 'grunt@^0.4.5',
+verbose parsed url   path: 'grunt@^0.4.5',
+verbose parsed url   href: 'grunt@^0.4.5' }
+silly cache add: name, spec, args [ 'grunt', '^0.4.5', [ 'grunt', '^0.4.5' ] ]
+verbose parsed url { pathname: '^0.4.5', path: '^0.4.5', href: '^0.4.5' }
+verbose addNamed [ 'grunt', '^0.4.5' ]
+verbose addNamed [ null, null ]
+info addNameTag [ 'grunt', '^0.4.5' ]
+verbose raw, before any munging grunt
+verbose url resolving [ 'https://registry.npmjs.org/', './grunt' ]
+verbose url resolved https://registry.npmjs.org/grunt
+http GET https://registry.npmjs.org/grunt
+verbose cache add [ 'grunt-contrib-jshint@^0.10.0', null ]
+silly cache add: name, spec, args [ undefined,
+silly cache add: name, spec, args   'grunt-contrib-jshint@^0.10.0',
+silly cache add: name, spec, args   [ 'grunt-contrib-jshint@^0.10.0', null ] ]
+verbose parsed url { pathname: 'grunt-contrib-jshint@^0.10.0',
+verbose parsed url   path: 'grunt-contrib-jshint@^0.10.0',
+verbose parsed url   href: 'grunt-contrib-jshint@^0.10.0' }
+silly cache add: name, spec, args [ 'grunt-contrib-jshint',
+silly cache add: name, spec, args   '^0.10.0',
+silly cache add: name, spec, args   [ 'grunt-contrib-jshint', '^0.10.0' ] ]
+verbose parsed url { pathname: '^0.10.0', path: '^0.10.0', href: '^0.10.0' }
+verbose addNamed [ 'grunt-contrib-jshint', '^0.10.0' ]
+verbose addNamed [ null, null ]
+info addNameTag [ 'grunt-contrib-jshint', '^0.10.0' ]
+verbose raw, before any munging grunt-contrib-jshint
+verbose url resolving [ 'https://registry.npmjs.org/', './grunt-contrib-jshint' ]
+verbose url resolved https://registry.npmjs.org/grunt-contrib-jshint
+http GET https://registry.npmjs.org/grunt-contrib-jshint
+ERR! Error: failed to fetch from registry: grunt
+ERR!     at /usr/share/npm/lib/utils/npm-registry-client/get.js:139:12
+ERR!     at cb (/usr/share/npm/lib/utils/npm-registry-client/request.js:31:9)
+ERR!     at Request._callback (/usr/share/npm/lib/utils/npm-registry-client/request.js:136:18)
+ERR!     at Request.callback (/usr/lib/nodejs/request/main.js:119:22)
+ERR!     at Request.<anonymous> (/usr/lib/nodejs/request/main.js:212:58)
+ERR!     at Request.emit (events.js:88:20)
+ERR!     at ClientRequest.<anonymous> (/usr/lib/nodejs/request/main.js:412:12)
+ERR!     at ClientRequest.emit (events.js:67:17)
+ERR!     at HTTPParser.onIncoming (http.js:1261:11)
+ERR!     at HTTPParser.onHeadersComplete (http.js:102:31)
+ERR! You may report this log at:
+ERR!     <http://bugs.debian.org/npm>
+ERR! or use
+ERR!     reportbug --attach /home/bmh/Documents/kata/kata-tdd-1-BUI-MINH-HUNG/npm-debug.log npm
+ERR! 
+ERR! System Linux 3.2.0-65-generic
+ERR! command "node" "/usr/bin/npm" "install"
+ERR! cwd /home/bmh/Documents/kata/kata-tdd-1-BUI-MINH-HUNG
+ERR! node -v v0.6.12
+ERR! npm -v 1.1.4
+ERR! message failed to fetch from registry: grunt
+verbose exit [ 1, true ]
