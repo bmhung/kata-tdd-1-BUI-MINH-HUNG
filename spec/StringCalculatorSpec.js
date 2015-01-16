@@ -33,6 +33,10 @@ describe("StringCalculator sums all numbers in a string", function() {
 		expect(calculator.Add("//,\n1,-2,3,4,-5")).toThrow('negatives not allowed: -2, -5');
 	});
 
+	it("should ignore numbers bigger than 1000", function() {
+		expect(calculator.Add("//,\n1,2,3,4,1002")).toEqual(10);
+	});
+
 	it("should not work many-char-delimiter", function() {
 		expect(calculator.Add("//[,,]\n1,,-2,,3,,4,,-5")).toThrow('negatives not allowed: -2, -5');
 	});

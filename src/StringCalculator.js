@@ -22,11 +22,12 @@ var StringCalculator = function() {
 		for(var i=0; i < numbers.length; i++) { 
 			var number = parseInt(numbers[i]);
 			if(number < 0) negativeNumbers.push(number);
-			sum += parseInt(number); 
+			if(number > 1000) continue;
+			sum += number; 
 		}
 
 		if(negativeNumbers.length > 0) {
-			throw 'negatives not allowed: ' + negativeNumbers.join(', ');
+			throw new Error('negatives not allowed: ' + negativeNumbers.join(', '));
 		}
 
 		return sum;
